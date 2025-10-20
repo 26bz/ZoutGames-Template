@@ -9,6 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint -fix .",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -23,14 +24,12 @@
     "react-router-dom": "^7.0.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
+    "@eslint-react/eslint-plugin": "^2.2.2",
+    "@eslint/js": "^9.38.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.15.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^7.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint": "^9.38.0",
     "globals": "^16.4.0",
     "vite": "npm:rolldown-vite@latest"
   }

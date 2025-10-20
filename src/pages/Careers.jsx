@@ -82,8 +82,8 @@ const JobCard = ({ title, department, location, type, description, requirements,
           <div>
             <h4 className="font-semibold mb-2">Key Responsibilities</h4>
             <ul className="list-disc list-inside text-gray-400 space-y-1">
-              {responsibilities.map((item, index) => (
-                <li key={index} className="text-sm sm:text-base">
+              {responsibilities.map(item => (
+                <li key={item} className="text-sm sm:text-base">
                   {item}
                 </li>
               ))}
@@ -93,8 +93,8 @@ const JobCard = ({ title, department, location, type, description, requirements,
           <div>
             <h4 className="font-semibold mb-2">Requirements</h4>
             <ul className="list-disc list-inside text-gray-400 space-y-1">
-              {requirements.map((item, index) => (
-                <li key={index} className="text-sm sm:text-base">
+              {requirements.map(item => (
+                <li key={item} className="text-sm sm:text-base">
                   {item}
                 </li>
               ))}
@@ -266,8 +266,8 @@ const CareersPage = () => {
           <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">We offer competitive compensation and great benefits to keep you happy, healthy, and productive.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
+          {benefits.map(benefit => (
+            <div key={benefit.title} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
               <div className="w-12 h-12 rounded-lg bg-yellow-400/20 flex items-center justify-center mb-4">
                 <benefit.icon className="w-6 h-6 text-yellow-400" />
               </div>
@@ -295,8 +295,8 @@ const CareersPage = () => {
         </div>
 
         <div className="space-y-4 sm:space-y-6">
-          {filteredJobs.map((job, index) => (
-            <JobCard key={index} {...job} />
+          {filteredJobs.map(job => (
+            <JobCard key={job.title} {...job} />
           ))}
         </div>
       </div>

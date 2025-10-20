@@ -106,8 +106,8 @@ const PartnersPage = () => {
           <p className="text-gray-400 text-sm sm:text-base">To ensure mutual success, we have established the following requirements for our partner program.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {requirements.map((req, index) => (
-            <div key={index} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
+          {requirements.map(req => (
+            <div key={req.title} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
               <div className="w-12 h-12 rounded-lg bg-yellow-400/20 flex items-center justify-center mb-4">
                 <req.icon className="w-6 h-6 text-yellow-400" />
               </div>
@@ -123,8 +123,8 @@ const PartnersPage = () => {
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Partner Benefits</h2>
             <div className="space-y-6 sm:space-y-8">
-              {benefits.map((benefit, index) => (
-                <BenefitItem key={index} {...benefit} />
+              {benefits.map(benefit => (
+                <BenefitItem key={benefit.title} {...benefit} />
               ))}
             </div>
           </div>
@@ -137,8 +137,8 @@ const PartnersPage = () => {
       <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Our Partners</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {partners.map((partner, index) => (
-            <div key={index} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
+          {partners.map(partner => (
+            <div key={partner.name} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
               <div className="w-12 h-12 rounded-lg bg-yellow-400/20 flex items-center justify-center mb-4">
                 <img src={partner.logo} alt={partner.name} className="w-8 h-8 object-contain rounded" />
               </div>

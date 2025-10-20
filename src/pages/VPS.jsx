@@ -112,8 +112,8 @@ const VpsPage = () => {
       <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 py-16 sm:py-32">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Why Choose Our VPS</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {features.map((feature, index) => (
-            <div key={index} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
+          {features.map(feature => (
+            <div key={feature.title} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
               <div className="w-12 h-12 rounded-lg bg-yellow-400/20 flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-yellow-400" />
               </div>

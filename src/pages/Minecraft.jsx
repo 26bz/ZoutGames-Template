@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Check, Server, Shield, Cpu, Users, Layers, HardDrive } from 'lucide-react'
 import { GlowingButton } from '../components/ui/GlowingButton'
 import ShowcasePanel from '../components/ShowcasePanel'
@@ -41,8 +41,8 @@ const PlanCard = ({ ram, price, features, href }) => (
       </div>
     </div>
     <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
-      {features.map((feature, index) => (
-        <li key={index} className="flex items-center gap-2 text-gray-300">
+      {features.map(feature => (
+        <li key={`plan-feature-${feature}`} className="flex items-center gap-2 text-gray-300">
           <Check className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 shrink-0" />
           <span>{feature}</span>
         </li>
@@ -200,8 +200,8 @@ const MinecraftPage = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {(activeTab === 'basic' ? basicPlans : proPlans).map((plan, index) => (
-            <PlanCard key={index} {...plan} type={activeTab} />
+          {(activeTab === 'basic' ? basicPlans : proPlans).map(plan => (
+            <PlanCard key={`${activeTab}-plan-${plan.ram}-${plan.price}`} {...plan} type={activeTab} />
           ))}
         </div>
       </div>
@@ -209,8 +209,8 @@ const MinecraftPage = () => {
       <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 py-16 sm:py-24 border-t border-slate-800">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Why Choose Our Minecraft Hosting</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {features.map((feature, index) => (
-            <div key={index} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-gray-800">
+          {features.map(feature => (
+            <div key={`feature-${feature.title}`} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-gray-800">
               <div className="w-12 h-12 rounded-lg bg-yellow-400/20 flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-yellow-400" />
               </div>

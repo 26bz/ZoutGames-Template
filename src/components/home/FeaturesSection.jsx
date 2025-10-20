@@ -3,31 +3,37 @@ import { Cloud, Rocket } from 'lucide-react'
 
 export const features = [
   {
+    id: 'enterprise-performance-1',
     icon: Rocket,
     title: 'Enterprise Performance',
     description: 'Leverage cutting-edge network infrastructure with unmatched bandwidth and comprehensive DDoS protection',
   },
   {
+    id: 'redundant-architecture-1',
     icon: Cloud,
     title: 'Redundant Architecture',
     description: 'Dual fiber links, redundant switches, and enterprise-grade UDP routing ensure 99.99% uptime',
   },
   {
+    id: 'enterprise-performance-2',
     icon: Rocket,
     title: 'Enterprise Performance',
     description: 'Leverage cutting-edge network infrastructure with unmatched bandwidth and comprehensive DDoS protection',
   },
   {
+    id: 'redundant-architecture-2',
     icon: Cloud,
     title: 'Redundant Architecture',
     description: 'Dual fiber links, redundant switches, and enterprise-grade UDP routing ensure 99.99% uptime',
   },
   {
+    id: 'enterprise-performance-3',
     icon: Rocket,
     title: 'Enterprise Performance',
     description: 'Leverage cutting-edge network infrastructure with unmatched bandwidth and comprehensive DDoS protection',
   },
   {
+    id: 'redundant-architecture-3',
     icon: Cloud,
     title: 'Redundant Architecture',
     description: 'Dual fiber links, redundant switches, and enterprise-grade UDP routing ensure 99.99% uptime',
@@ -96,7 +102,7 @@ const FeaturesSection = () => {
           <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-16 text-center">Enterprise-Grade Infrastructure</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {features.map((feature, index) => (
-              <AnimatedFeature key={index} {...feature} delay={Math.min(index * 0.1, 0.5)} />
+              <AnimatedFeature key={feature.id} {...feature} delay={Math.min(index * 0.1, 0.5)} />
             ))}
           </div>
         </section>

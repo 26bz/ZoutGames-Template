@@ -12,8 +12,8 @@ const PlanCard = ({ name, price, features, popular, href }) => (
       <span className="text-gray-400">/mo</span>
     </div>
     <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 flex-grow text-sm sm:text-base">
-      {features.map((feature, index) => (
-        <li key={index} className="flex items-center gap-2 text-gray-300">
+      {features.map(feature => (
+        <li key={feature} className="flex items-center gap-2 text-gray-300">
           <Check className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 shrink-0" />
           <span>{feature}</span>
         </li>
@@ -44,8 +44,8 @@ const FeatureComparison = ({ plans, featuresList }) => (
           </tr>
         </thead>
         <tbody>
-          {featuresList.map((feature, index) => (
-            <tr key={index} className="border-b border-slate-800">
+          {featuresList.map(feature => (
+            <tr key={feature.name} className="border-b border-slate-800">
               <td className="p-3 sm:p-4 text-gray-300 text-sm sm:text-base">{feature.name}</td>
               {plans.map(plan => (
                 <td key={`${plan.name}-${feature.name}`} className="p-3 sm:p-4 text-center">
@@ -237,8 +237,8 @@ const CpanelHostingPage = () => {
       <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 py-16 sm:py-32 border-t border-slate-800">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Why Choose Our Hosting</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {features.map((feature, index) => (
-            <div key={index} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
+          {features.map(feature => (
+            <div key={feature.title} className="p-4 sm:p-6 rounded-lg bg-slate-900/50 border border-slate-800">
               <div className="w-12 h-12 rounded-lg bg-yellow-400/20 flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-yellow-400" />
               </div>

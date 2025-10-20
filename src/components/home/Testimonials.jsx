@@ -37,13 +37,16 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 }
 
-const RatingStars = ({ rating }) => (
-  <div className="flex space-x-1 mb-4">
-    {[...Array(rating)].map((_, index) => (
-      <StarIcon key={index} className="w-4 h-4 text-yellow-400 fill-yellow-400" aria-hidden="true" />
-    ))}
-  </div>
-)
+const RatingStars = ({ rating }) => {
+  const stars = Array.from({ length: rating }, (_, i) => i)
+  return (
+    <div className="flex space-x-1 mb-4">
+      {stars.map(star => (
+        <StarIcon key={`star-${star}`} className="w-4 h-4 text-yellow-400 fill-yellow-400" aria-hidden="true" />
+      ))}
+    </div>
+  )
+}
 
 const ReviewCard = ({ name, role, image, rating, content }) => (
   <div className="bg-slate-900 rounded-xl p-4 sm:p-6 border border-gray-800 h-full flex flex-col">

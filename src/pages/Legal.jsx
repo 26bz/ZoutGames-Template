@@ -130,8 +130,8 @@ const LegalTabs = () => {
           <div className="text-xs sm:text-sm text-gray-400 mb-6 sm:mb-8">Last Updated: {legalContent[activeTab].lastUpdated}</div>
 
           <div className="space-y-8 sm:space-y-12">
-            {legalContent[activeTab].content.map((section, index) => (
-              <div key={index} className="space-y-3 sm:space-y-4">
+            {legalContent[activeTab].content.map(section => (
+              <div key={section.title} className="space-y-3 sm:space-y-4">
                 <h2 className="text-xl sm:text-2xl font-bold">{section.title}</h2>
                 <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{section.content}</p>
               </div>
