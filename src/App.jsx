@@ -1,3 +1,9 @@
+/*
+ * ZoutGames Hosting Company Template
+ * Copyright (C) 2025 26bz (https://26bz.online/)
+ * Licensed under GNU GPLv3 or later. See LICENSE file.
+ */
+
 import React, { Suspense, useEffect } from 'react'
 import { createBrowserRouter, RouterProvider, useLocation, useNavigate } from 'react-router-dom'
 import Layout from './components/Layout'

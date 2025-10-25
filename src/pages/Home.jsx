@@ -1,3 +1,9 @@
+/*
+ * ZoutGames Hosting Company Template
+ * Copyright (C) 2025 26bz (https://26bz.online/)
+ * Licensed under GNU GPLv3 or later. See LICENSE file.
+ */
+
 import FeaturesSection from '../components/home/FeaturesSection'
 import Hero from '../components/home/Hero'
 import ShowcasePanel from '../components/ShowcasePanel'

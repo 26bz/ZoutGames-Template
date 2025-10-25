@@ -77,8 +77,17 @@ If you encounter any issues:
 - If installing on a web server, you'll need to create an `.htaccess` file.
 - If installing on a VPS, ensure your Nginx configuration for the site is set to direct requests to `index.html`.
 
-## Need Additional Help?
+## License
 
-Contact me at:
+This project is licensed under the GNU General Public License v3.0 (GPLv3).
 
+- You may use, modify, and redistribute this module freely.
+- Any distributed modifications must remain under GPLv3.
+- Commercial resale of closed-source versions is not allowed.
+
+Full license text is in the `LICENSE` file.
+
+### Contact
+
+- Website: https://26bz.online
 - Discord: https://26bz.online/discord

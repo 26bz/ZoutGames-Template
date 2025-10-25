@@ -2,8 +2,12 @@
   "name": "zoutgames",
   "private": true,
   "version": "1.0.1",
-  "license": "MIT",
-  "author": "26BZ, https://26bz.online/",
+  "license": "GPL-3.0-only",
+  "author": {
+    "name": "26bz",
+    "email": "26bz@proton.me",
+    "url": "https://26bz.online/"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
